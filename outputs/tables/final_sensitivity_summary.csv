@@ -1,0 +1,5 @@
+scenario_name,avg_interarrival_time_minutes,throughput_mean,avg_total_waiting_time_mean,avg_completion_time_mean,picker_utilization_mean,packer_utilization_mean,shipping_utilization_mean
+Interarrival Time = 6 min,6.0,71.867,28.61,46.696,0.595,0.911,0.605
+Interarrival Time = 5 min,5.0,75.267,49.68,67.781,0.631,0.947,0.629
+Interarrival Time = 4 min,4.0,77.233,83.955,102.027,0.647,0.965,0.648
+Interarrival Time = 3.5 min,3.5,77.867,101.439,119.509,0.657,0.967,0.651
