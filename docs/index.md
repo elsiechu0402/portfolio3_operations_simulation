@@ -415,7 +415,7 @@ A separate demand sensitivity analysis was also conducted using the baseline res
   </div>
 </div>
 
-<div class="results-explanation">
+<div class="results-explanation" markdown="1">
 
 Table 3 compares the average performance of the five resource configurations based on 30 simulation replications for each scenario. Add One Picker and Add One Shipping Station produced results close to the baseline, which had an average throughput of (**75.267 orders**), an average total waiting time of (**49.680 minutes**), and an average completion time of (**67.781 minutes**). Add One Packer produced a much larger improvement, increasing throughput to (**91.233 orders**) and reducing total waiting time to (**8.643 minutes**). Balanced Capacity achieved the best overall performance among the five tested configurations, with the highest throughput (**92.733 orders**), the lowest total waiting time (**6.737 minutes**), and the lowest completion time (**24.755 minutes**).
 
@@ -454,7 +454,7 @@ Table 3 compares the average performance of the five resource configurations bas
   <p class="figure-caption">Figure 3. Average throughput by resource configuration.</p>
 </div>
 
-<div class="results-explanation">
+<div class="results-explanation" markdown="1">
 
 Figures 1–3 compare the five resource configurations using average completion time, average total waiting time, and throughput. Add One Packer and Balanced Capacity performed much better than the other scenarios. Add One Packer reduced average completion time to (**26.716 minutes**) and total waiting time to (**8.643 minutes**), while increasing throughput to (**91.233 orders**). Balanced Capacity achieved the best overall results, with the lowest average completion time (**24.755 minutes**), the lowest total waiting time (**6.737 minutes**), and the highest throughput (**92.733 orders**). These figures show that increasing packing capacity produced the largest improvement in overall warehouse performance.
 
@@ -535,7 +535,7 @@ Figures 1–3 compare the five resource configurations using average completion 
   </div>
 </div>
 
-<div class="results-explanation">
+<div class="results-explanation" markdown="1">
 
 Table 4 compares the bottleneck indicators and performance changes relative to the baseline. In the baseline configuration, the packer had the highest utilization (**0.947**), and packing had the longest average waiting time (**42.093 minutes**), indicating that packing was the main bottleneck. After one packer was added, total waiting time decreased by (**82.603%**) and completion time decreased by (**60.586%**). Balanced Capacity produced the largest overall improvement, with throughput increasing by (**17.467 orders**) and total waiting time decreasing by (**86.439%**).
 
@@ -563,7 +563,7 @@ Table 4 compares the bottleneck indicators and performance changes relative to t
   <p class="figure-caption">Figure 5. Average waiting time by process stage and resource configuration.</p>
 </div>
 
-<div class="results-explanation">
+<div class="results-explanation" markdown="1">
 
 Figures 4 and 5 show resource utilization and average waiting time across the three stages—picking, packing, and shipping—under the five scenarios. Figure 4 shows that packer utilization under Add One Packer (0.573) and Balanced Capacity (0.575) was lower than under the other three scenarios, where packer utilization remained close to (0.950) in the Baseline, Add One Picker, and Add One Shipping Station scenarios.
 
@@ -655,7 +655,7 @@ Therefore, the packing bottleneck identified in the baseline was removed as the 
   <p class="figure-caption">Figure 7. Average throughput under different demand levels.</p>
 </div>
 
-<div class="results-explanation">
+<div class="results-explanation" markdown="1">
 
 Table 5 and Figures 6 and 7 show how the baseline resource configuration performed under four different demand levels, with average interarrival times of (6.0, 5.0, 4.0, and 3.5 minutes). As the average interarrival time decreased from (6.0 minutes) to (3.5 minutes), the demand level increased. The results show that average total waiting time increased sharply from (28.610 minutes) to (101.439 minutes), while average completion time increased substantially from (46.696 minutes) to (119.509 minutes). However, throughput increased steadily from (71.867 orders) to (77.867 orders), showing that the baseline system was approaching its capacity limit as demand increased.
 
