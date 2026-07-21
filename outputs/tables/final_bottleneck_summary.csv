@@ -1,6 +1,0 @@
-scenario_name,max_utilization_resource,max_utilization_value,longest_wait_stage,longest_wait_minutes,throughput_change_vs_baseline,waiting_time_reduction_pct_vs_baseline,completion_time_reduction_pct_vs_baseline
-Baseline,Packer,0.947,Packing,42.093,0.0,0.0,0.0
-Add One Picker,Packer,0.951,Packing,48.166,0.867,0.858,0.64
-Add One Packer,Shipping Station,0.764,Picking,5.307,15.967,82.603,60.586
-Add One Shipping Station,Packer,0.947,Packing,44.833,0.267,-5.403,-3.934
-Balanced Capacity,Shipping Station,0.772,Shipping,4.967,17.467,86.439,63.478

@@ -1,6 +1,0 @@
-scenario_name,num_pickers,num_packers,num_shipping_stations,throughput_mean,avg_total_waiting_time_mean,avg_completion_time_mean,picker_utilization_mean,packer_utilization_mean,shipping_utilization_mean
-Baseline,2,1,1,75.267,49.68,67.781,0.631,0.947,0.629
-Add One Picker,3,1,1,76.133,49.253,67.347,0.427,0.951,0.638
-Add One Packer,2,2,1,91.233,8.643,26.716,0.763,0.573,0.764
-Add One Shipping Station,2,1,2,75.533,52.364,70.448,0.632,0.947,0.317
-Balanced Capacity,3,2,1,92.733,6.737,24.755,0.52,0.575,0.772
