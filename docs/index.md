@@ -1,105 +1,72 @@
 ---
-layout: default
-title: "Simulation-Based Decision Support for Warehouse Operations and Bottleneck Analysis"
+layout: null
+title: Simulation-Based Decision Support for Warehouse Operations and Bottleneck Analysis
 ---
 
 <style>
-  html {
-    scroll-behavior: smooth;
+  body {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 32px 20px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    line-height: 1.6;
+    color: #24292f;
+    background: #ffffff;
   }
 
-  .project-hero {
-    text-align: center;
-    padding: 2rem 1rem 1.5rem;
-    border-bottom: 1px solid #d8dee4;
-    margin-bottom: 1.25rem;
+  a {
+    color: #0969da;
   }
 
-  .project-hero h1 {
-    margin: 0 0 0.75rem;
-    font-size: 2.15rem;
+  h1, h2, h3 {
     line-height: 1.25;
   }
 
-  .project-subtitle {
-    margin: 0;
-    color: #57606a;
-    font-size: 1.1rem;
-    line-height: 1.55;
+  .portfolio-title {
+    margin-top: 1.2rem;
+    margin-bottom: 0.4rem;
   }
 
-  .project-nav {
+  .portfolio-subtitle {
+    color: #5f6368;
+    font-size: 1.05rem;
+    margin-bottom: 1.1rem;
+  }
+
+  .portfolio-nav {
     position: sticky;
     top: 0;
-    z-index: 100;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.45rem 0.85rem;
-    padding: 0.8rem 1rem;
-    margin: 0 0 1.25rem;
-    background: rgba(255, 255, 255, 0.96);
-    border-top: 1px solid #d8dee4;
-    border-bottom: 1px solid #d8dee4;
-    backdrop-filter: blur(8px);
+    z-index: 5;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 10px 12px;
+    margin: 16px 0 22px 0;
+    line-height: 1.9;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.04);
   }
 
-  .project-nav a {
-    color: #1f4e79;
-    font-size: 0.91rem;
-    font-weight: 600;
-    text-decoration: none;
-    white-space: nowrap;
-  }
-
-  .project-nav a:hover {
-    text-decoration: underline;
-  }
-
-  .report-link-wrapper {
-    text-align: center;
-    margin: 1.25rem 0 2.25rem;
-  }
-
-  .report-link {
+  .portfolio-nav a {
     display: inline-block;
-    padding: 0.65rem 1.15rem;
-    border: 1px solid #1f4e79;
-    border-radius: 5px;
-    color: #1f4e79;
-    font-weight: 600;
+    margin-right: 12px;
+    font-size: 0.92rem;
     text-decoration: none;
   }
 
-  .report-link:hover {
-    color: #ffffff;
-    background: #1f4e79;
-    text-decoration: none;
-  }
-
-  .section-anchor {
-    scroll-margin-top: 5rem;
-  }
-
-  .table-block,
-  .figure-block {
-    width: min(1100px, 96vw);
-    margin: 2rem 0;
-    margin-left: 50%;
-    transform: translateX(-50%);
+  .table-block {
+    margin: 1.8rem 0;
   }
 
   .table-title {
     margin: 0 0 0.65rem;
-    text-align: center;
     font-weight: 700;
-    line-height: 1.4;
   }
 
   .table-scroll {
+    width: 100%;
     overflow-x: auto;
-    border: 1px solid #d8dee4;
-    border-radius: 6px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
   }
 
   .project-table {
@@ -114,7 +81,7 @@ title: "Simulation-Based Decision Support for Warehouse Operations and Bottlenec
   .project-table th,
   .project-table td {
     padding: 0.65rem 0.75rem;
-    border-bottom: 1px solid #d8dee4;
+    border-bottom: 1px solid #e5e7eb;
     text-align: right;
     vertical-align: middle;
     white-space: nowrap;
@@ -139,17 +106,21 @@ title: "Simulation-Based Decision Support for Warehouse Operations and Bottlenec
     background: #fbfcfd;
   }
 
+  .figure-block {
+    margin: 2rem 0;
+  }
+
   .interactive-frame {
     display: block;
     width: 100%;
-    height: 620px;
-    border: 1px solid #d8dee4;
-    border-radius: 6px;
+    height: 600px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
     background: #ffffff;
   }
 
   .interactive-frame.tall {
-    height: 650px;
+    height: 620px;
   }
 
   .figure-caption {
@@ -168,59 +139,44 @@ title: "Simulation-Based Decision Support for Warehouse Operations and Bottlenec
   }
 
   @media (max-width: 700px) {
-    .project-hero {
-      padding-top: 1.25rem;
+    body {
+      padding: 24px 14px;
     }
 
-    .project-hero h1 {
-      font-size: 1.65rem;
+    .portfolio-title {
+      font-size: 1.75rem;
     }
 
-    .project-subtitle {
-      font-size: 1rem;
-    }
-
-    .project-nav {
+    .portfolio-nav {
       position: static;
-      justify-content: flex-start;
     }
 
     .interactive-frame,
     .interactive-frame.tall {
-      height: 560px;
+      height: 540px;
     }
   }
 </style>
 
-<div class="project-hero">
-  <h1>Simulation-Based Decision Support for Warehouse Operations and Bottleneck Analysis</h1>
-  <p class="project-subtitle">A Discrete-Event Simulation Study of Staffing Policies, Bottlenecks, and Demand Intensity</p>
+<h1 class="portfolio-title">Simulation-Based Decision Support for Warehouse Operations and Bottleneck Analysis</h1>
+
+<p class="portfolio-subtitle">Portfolio 3: A Discrete-Event Simulation Study of Staffing Policies, Bottlenecks, and Demand Intensity | Zhiyi Zhu (Elsie Chu)</p>
+
+<div class="portfolio-nav">
+  <a href="#1-introduction">Introduction</a>
+  <a href="#2-research-question">Research Question</a>
+  <a href="#3-system-description">System Description</a>
+  <a href="#4-methods">Methods</a>
+  <a href="#5-results">Results</a>
+  <a href="#6-discussion">Discussion</a>
+  <a href="#7-limitations">Limitations</a>
+  <a href="#8-conclusion">Conclusion</a>
+  <a href="#9-tools">Tools</a>
 </div>
 
-<nav class="project-nav" aria-label="Project navigation">
-  <a href="#introduction">Introduction</a>
-  <a href="#research-question">Research Question</a>
-  <a href="#system-description">System Description</a>
-  <a href="#methods">Methods</a>
-  <a href="#results">Results</a>
-  <a href="#discussion">Discussion</a>
-  <a href="#limitations">Limitations</a>
-  <a href="#conclusion">Conclusion</a>
-  <a href="#tools">Tools</a>
-</nav>
-
-<div class="report-link-wrapper">
-  <a
-    class="report-link"
-    href="{{ '/final_report.pdf' | relative_url }}"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    View Full Report PDF
-  </a>
-</div>
-
-<div id="introduction" class="section-anchor"></div>
+<p>
+  <a href="final_report.pdf" target="_blank"><strong>View Full Report PDF</strong></a>
+</p>
 
 ## 1. Introduction
 
@@ -229,8 +185,6 @@ Warehouse order fulfillment usually includes several connected stages, such as p
 Adding more workers or stations does not always improve the whole system. If the additional resource is not added to the bottleneck stage, the main problem may remain.
 
 In this project, I built a discrete-event simulation model in Python using SimPy. The model was used to compare different staffing and capacity configurations and examine how demand intensity affects warehouse performance.
-
-<div id="research-question" class="section-anchor"></div>
 
 ## 2. Research Question
 
@@ -243,8 +197,6 @@ The project also examines:
 1. Which process stage is the main bottleneck under the baseline configuration?
 2. Which tested resource configuration produces the largest improvement?
 3. How does the baseline system perform under different demand levels?
-
-<div id="system-description" class="section-anchor"></div>
 
 ## 3. System Description
 
@@ -327,8 +279,6 @@ The average processing times are 8 minutes for picking, 6 minutes for packing, a
 
 The model is a simplified warehouse system. All orders follow the same process, and workers and stations remain available during the simulation period. Worker breaks, equipment failures, inventory shortages, order cancellations, and differences between order types are not included.
 
-<div id="methods" class="section-anchor"></div>
-
 ## 4. Methods
 
 The warehouse model was built in Python using SimPy. Order arrival times and processing times were randomly generated. Because simulation results can vary across runs, each setting was simulated 30 times using different random seeds, and the average results were used for comparison.
@@ -393,8 +343,6 @@ Five resource configurations were tested:
 The bottleneck was identified by comparing resource utilization and waiting time before each process stage.
 
 A separate demand sensitivity analysis was also conducted using the baseline resource configuration. The average interarrival time was changed to 6, 5, 4, and 3.5 minutes. A shorter interarrival time represents a higher demand level.
-
-<div id="results" class="section-anchor"></div>
 
 ## 5. Results
 
@@ -468,13 +416,15 @@ A separate demand sensitivity analysis was also conducted using the baseline res
 </div>
 
 <div class="results-explanation">
+
 Table 3 compares the average performance of the five resource configurations based on 30 simulation replications for each scenario. Add One Picker and Add One Shipping Station produced results close to the baseline, which had an average throughput of (**75.267 orders**), an average total waiting time of (**49.680 minutes**), and an average completion time of (**67.781 minutes**). Add One Packer produced a much larger improvement, increasing throughput to (**91.233 orders**) and reducing total waiting time to (**8.643 minutes**). Balanced Capacity achieved the best overall performance among the five tested configurations, with the highest throughput (**92.733 orders**), the lowest total waiting time (**6.737 minutes**), and the lowest completion time (**24.755 minutes**).
+
 </div>
 
 <div class="figure-block">
   <iframe
     class="interactive-frame"
-    src="{{ '/interactive/figure1_completion_time.html' | relative_url }}"
+    src="interactive/figure1_completion_time.html"
     title="Interactive Figure 1: Average completion time by resource configuration"
     loading="lazy"
   ></iframe>
@@ -485,7 +435,7 @@ Table 3 compares the average performance of the five resource configurations bas
 <div class="figure-block">
   <iframe
     class="interactive-frame"
-    src="{{ '/interactive/figure2_total_waiting_time.html' | relative_url }}"
+    src="interactive/figure2_total_waiting_time.html"
     title="Interactive Figure 2: Average total waiting time by resource configuration"
     loading="lazy"
   ></iframe>
@@ -496,7 +446,7 @@ Table 3 compares the average performance of the five resource configurations bas
 <div class="figure-block">
   <iframe
     class="interactive-frame"
-    src="{{ '/interactive/figure3_throughput.html' | relative_url }}"
+    src="interactive/figure3_throughput.html"
     title="Interactive Figure 3: Average throughput by resource configuration"
     loading="lazy"
   ></iframe>
@@ -505,7 +455,9 @@ Table 3 compares the average performance of the five resource configurations bas
 </div>
 
 <div class="results-explanation">
+
 Figures 1–3 compare the five resource configurations using average completion time, average total waiting time, and throughput. Add One Packer and Balanced Capacity performed much better than the other scenarios. Add One Packer reduced average completion time to (**26.716 minutes**) and total waiting time to (**8.643 minutes**), while increasing throughput to (**91.233 orders**). Balanced Capacity achieved the best overall results, with the lowest average completion time (**24.755 minutes**), the lowest total waiting time (**6.737 minutes**), and the highest throughput (**92.733 orders**). These figures show that increasing packing capacity produced the largest improvement in overall warehouse performance.
+
 </div>
 
 ### 5.2 Bottleneck Analysis
@@ -584,13 +536,15 @@ Figures 1–3 compare the five resource configurations using average completion 
 </div>
 
 <div class="results-explanation">
+
 Table 4 compares the bottleneck indicators and performance changes relative to the baseline. In the baseline configuration, the packer had the highest utilization (**0.947**), and packing had the longest average waiting time (**42.093 minutes**), indicating that packing was the main bottleneck. After one packer was added, total waiting time decreased by (**82.603%**) and completion time decreased by (**60.586%**). Balanced Capacity produced the largest overall improvement, with throughput increasing by (**17.467 orders**) and total waiting time decreasing by (**86.439%**).
+
 </div>
 
 <div class="figure-block">
   <iframe
     class="interactive-frame"
-    src="{{ '/interactive/figure4_resource_utilization.html' | relative_url }}"
+    src="interactive/figure4_resource_utilization.html"
     title="Interactive Figure 4: Resource utilization by resource configuration"
     loading="lazy"
   ></iframe>
@@ -601,7 +555,7 @@ Table 4 compares the bottleneck indicators and performance changes relative to t
 <div class="figure-block">
   <iframe
     class="interactive-frame"
-    src="{{ '/interactive/figure5_stage_waiting_time.html' | relative_url }}"
+    src="interactive/figure5_stage_waiting_time.html"
     title="Interactive Figure 5: Average waiting time by process stage and resource configuration"
     loading="lazy"
   ></iframe>
@@ -610,11 +564,13 @@ Table 4 compares the bottleneck indicators and performance changes relative to t
 </div>
 
 <div class="results-explanation">
+
 Figures 4 and 5 show resource utilization and average waiting time across the three stages—picking, packing, and shipping—under the five scenarios. Figure 4 shows that packer utilization under Add One Packer (0.573) and Balanced Capacity (0.575) was lower than under the other three scenarios, where packer utilization remained close to (0.950) in the Baseline, Add One Picker, and Add One Shipping Station scenarios.
 
 Figure 5 shows that average packing waiting time was close to zero under Add One Packer and Balanced Capacity. In contrast, average packing waiting time remained much higher under the other three scenarios (42.093, 48.166, and 44.833 minutes).
 
 Therefore, the packing bottleneck identified in the baseline was removed as the main bottleneck under the Add One Packer and Balanced Capacity configurations. However, as the resource configuration changed, the main constraint could shift to another stage. Under Add One Packer, the results did not identify one single dominant new bottleneck. Under Balanced Capacity, shipping became the clearest new bottleneck in this scenario.
+
 </div>
 
 ### 5.3 Demand Sensitivity Analysis
@@ -680,7 +636,7 @@ Therefore, the packing bottleneck identified in the baseline was removed as the 
 <div class="figure-block">
   <iframe
     class="interactive-frame tall"
-    src="{{ '/interactive/figure6_demand_waiting_time.html' | relative_url }}"
+    src="interactive/figure6_demand_waiting_time.html"
     title="Interactive Figure 6: Average total waiting time under different demand levels"
     loading="lazy"
   ></iframe>
@@ -691,7 +647,7 @@ Therefore, the packing bottleneck identified in the baseline was removed as the 
 <div class="figure-block">
   <iframe
     class="interactive-frame tall"
-    src="{{ '/interactive/figure7_demand_throughput.html' | relative_url }}"
+    src="interactive/figure7_demand_throughput.html"
     title="Interactive Figure 7: Average throughput under different demand levels"
     loading="lazy"
   ></iframe>
@@ -700,10 +656,10 @@ Therefore, the packing bottleneck identified in the baseline was removed as the 
 </div>
 
 <div class="results-explanation">
-Table 5 and Figures 6 and 7 show how the baseline resource configuration performed under four different demand levels, with average interarrival times of (6.0, 5.0, 4.0, and 3.5 minutes). As the average interarrival time decreased from (6.0 minutes) to (3.5 minutes), the demand level increased. The results show that average total waiting time increased sharply from (28.610 minutes) to (101.439 minutes), while average completion time increased substantially from (46.696 minutes) to (119.509 minutes). However, throughput increased steadily from (71.867 orders) to (77.867 orders), showing that the baseline system was approaching its capacity limit as demand increased.
-</div>
 
-<div id="discussion" class="section-anchor"></div>
+Table 5 and Figures 6 and 7 show how the baseline resource configuration performed under four different demand levels, with average interarrival times of (6.0, 5.0, 4.0, and 3.5 minutes). As the average interarrival time decreased from (6.0 minutes) to (3.5 minutes), the demand level increased. The results show that average total waiting time increased sharply from (28.610 minutes) to (101.439 minutes), while average completion time increased substantially from (46.696 minutes) to (119.509 minutes). However, throughput increased steadily from (71.867 orders) to (77.867 orders), showing that the baseline system was approaching its capacity limit as demand increased.
+
+</div>
 
 ## 6. Discussion
 
@@ -713,8 +669,6 @@ After one packer was added, average total waiting time decreased from (**49.680 
 
 The sensitivity analysis also shows that the baseline system became less stable as demand increased. When the average interarrival time decreased from (**6.0 minutes**) to (**3.5 minutes**), average total waiting time increased sharply from (**28.610 minutes**) to (**101.439 minutes**), while throughput increased only slightly from (**71.867 orders**) to (**77.867 orders**). These results show that warehouse resources should be added based on the actual bottleneck rather than increasing capacity at every stage. They also show that capacity planning should consider how the bottleneck may shift after the original constraint is removed.
 
-<div id="limitations" class="section-anchor"></div>
-
 ## 7. Limitations
 
 1. The model parameters were based on simulated assumptions rather than real warehouse data, so the results may not fully represent actual warehouse operations.
@@ -722,13 +676,9 @@ The sensitivity analysis also shows that the baseline system became less stable 
 3. The analysis compared only (**5 staffing configurations**) and tested (**4 demand levels**) under the baseline resources.
 4. The model did not include labor or equipment costs, so the results cannot directly identify the most cost-effective resource configuration.
 
-<div id="conclusion" class="section-anchor"></div>
-
 ## 8. Conclusion
 
 This project used discrete-event simulation to identify warehouse bottlenecks and compare different staffing configurations. In the baseline system, packing was the main bottleneck, with packer utilization of (**0.947**) and an average packing waiting time of (**42.093 minutes**). Among the three single-resource addition scenarios, Add One Packer produced the largest improvement, reducing average total waiting time to (**8.643 minutes**). Balanced Capacity achieved the best overall performance among the five tested resource configurations, with the highest throughput (**92.733 orders**) and the lowest total waiting time (**6.737 minutes**). The sensitivity analysis shows that the baseline system approached its capacity limit as demand increased. Overall, the simulation provides useful decision support for warehouse staffing and capacity planning.
-
-<div id="tools" class="section-anchor"></div>
 
 ## 9. Tools
 
