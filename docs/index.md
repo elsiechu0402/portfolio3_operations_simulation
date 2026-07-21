@@ -565,9 +565,9 @@ Table 4 compares the bottleneck indicators and performance changes relative to t
 
 <div class="results-explanation" markdown="1">
 
-Figures 4 and 5 show resource utilization and average waiting time across the three stages—picking, packing, and shipping—under the five scenarios. Figure 4 shows that packer utilization under Add One Packer (0.573) and Balanced Capacity (0.575) was lower than under the other three scenarios, where packer utilization remained close to (0.950) in the Baseline, Add One Picker, and Add One Shipping Station scenarios.
+Figures 4 and 5 show resource utilization and average waiting time across the three stages—picking, packing, and shipping—under the five scenarios. Figure 4 shows that packer utilization under Add One Packer (**0.573**) and Balanced Capacity (**0.575**) was lower than under the other three scenarios, where packer utilization remained close to (**0.950**) in the Baseline, Add One Picker, and Add One Shipping Station scenarios.
 
-Figure 5 shows that average packing waiting time was close to zero under Add One Packer and Balanced Capacity. In contrast, average packing waiting time remained much higher under the other three scenarios (42.093, 48.166, and 44.833 minutes).
+Figure 5 shows that average packing waiting time was close to zero under Add One Packer and Balanced Capacity. In contrast, average packing waiting time remained much higher under the other three scenarios (**42.093**, **48.166**, and **44.833 minutes**).
 
 Therefore, the packing bottleneck identified in the baseline was removed as the main bottleneck under the Add One Packer and Balanced Capacity configurations. However, as the resource configuration changed, the main constraint could shift to another stage. Under Add One Packer, the results did not identify one single dominant new bottleneck. Under Balanced Capacity, shipping became the clearest new bottleneck in this scenario.
 
@@ -657,7 +657,7 @@ Therefore, the packing bottleneck identified in the baseline was removed as the 
 
 <div class="results-explanation" markdown="1">
 
-Table 5 and Figures 6 and 7 show how the baseline resource configuration performed under four different demand levels, with average interarrival times of (6.0, 5.0, 4.0, and 3.5 minutes). As the average interarrival time decreased from (6.0 minutes) to (3.5 minutes), the demand level increased. The results show that average total waiting time increased sharply from (28.610 minutes) to (101.439 minutes), while average completion time increased substantially from (46.696 minutes) to (119.509 minutes). However, throughput increased steadily from (71.867 orders) to (77.867 orders), showing that the baseline system was approaching its capacity limit as demand increased.
+Table 5 and Figures 6 and 7 show how the baseline resource configuration performed under four different demand levels, with average interarrival times of (6.0, 5.0, 4.0, and 3.5 minutes). As the average interarrival time decreased from (**6.0 minutes**) to (**3.5 minutes**), the demand level increased. The results show that average total waiting time increased sharply from (**28.610 minutes**) to (**101.439 minutes**), while average completion time increased substantially from (**46.696 minutes**) to (**119.509 minutes**). However, throughput increased steadily from (**71.867 orders**) to (**77.867 orders**), showing that the baseline system was approaching its capacity limit as demand increased.
 
 </div>
 
