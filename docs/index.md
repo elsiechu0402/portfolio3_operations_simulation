@@ -679,7 +679,6 @@ The sensitivity analysis also shows that the baseline system became less stable 
 This project used discrete-event simulation to identify warehouse bottlenecks and compare different staffing configurations. In the baseline system, packing was the main bottleneck, with packer utilization of (**0.947**) and an average packing waiting time of (**42.093 minutes**). Among the three single-resource addition scenarios, Add One Packer produced the largest improvement, reducing average total waiting time to (**8.643 minutes**). Balanced Capacity achieved the best overall performance among the five tested resource configurations, with the highest throughput (**92.733 orders**) and the lowest total waiting time (**6.737 minutes**). The sensitivity analysis shows that the baseline system approached its capacity limit as demand increased. Overall, the simulation provides useful decision support for warehouse staffing and capacity planning.
 
 ## 9. Tools
-
 <div class="tools-list">
   <strong>Python:</strong> simulation modeling and data analysis<br>
   <strong>SimPy:</strong> discrete-event simulation<br>
@@ -687,5 +686,6 @@ This project used discrete-event simulation to identify warehouse bottlenecks an
   <strong>Matplotlib:</strong> static result visualization<br>
   <strong>Plotly:</strong> interactive visualization for GitHub Pages<br>
   <strong>Jupyter Notebook:</strong> project workflow<br>
-  <strong>GitHub Pages:</strong> portfolio presentation
+  <strong>GitHub Pages:</strong> portfolio presentation<br>
+  <strong>LaTeX (via Pandoc):</strong> report typesetting
 </div>
