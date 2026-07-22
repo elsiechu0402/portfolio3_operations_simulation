@@ -184,7 +184,7 @@ Warehouse order fulfillment usually includes several connected stages, such as p
 
 Adding more workers or stations does not always improve the whole system. If the additional resource is not added to the bottleneck stage, the main problem may remain.
 
-In this project, I built a discrete-event simulation model in Python using SimPy. The model was used to compare different staffing and capacity configurations and examine how demand intensity affects warehouse performance.
+In this project, I built a discrete-event simulation model in Python using SimPy. The model was used to compare different staffing and capacity configurations and examine how demand intensity affects warehouse performance, with the goal of showing how simulation can identify the actual bottleneck before resources are added.
 
 ## 2. Research Question
 
@@ -192,10 +192,10 @@ The main research question is:
 
 > How do different resource configurations affect waiting time, completion time, throughput, and resource utilization in a simulated warehouse system?
 
-The project also examines:
+The project also examines the following questions:
 
 1. Which process stage is the main bottleneck under the baseline configuration?
-2. Which tested resource configuration produces the largest improvement?
+2. Which tested resource configuration produces the largest improvement in warehouse performance?
 3. How does the baseline system perform under different demand levels?
 
 ## 3. System Description
@@ -206,7 +206,7 @@ The simulated warehouse includes three stages:
 2. Packing
 3. Shipping
 
-After an order arrives, it waits for an available picker. It then moves to packing and finally to shipping before leaving the system.
+After an order arrives, it waits for an available picker. It then moves to packing and finally to shipping, waiting again at each stage if the required resource is busy, before leaving the system.
 
 The baseline system represents one 480-minute warehouse shift. Orders arrive every 5 minutes on average. The baseline resource configuration includes:
 
@@ -277,7 +277,7 @@ The average processing times are 8 minutes for picking, 6 minutes for packing, a
   </div>
 </div>
 
-The model is a simplified warehouse system. All orders follow the same process, and workers and stations remain available during the simulation period. Worker breaks, equipment failures, inventory shortages, order cancellations, and differences between order types are not included.
+The model is a simplified representation of a warehouse system. All orders follow the same process, and workers and stations remain available during the simulation period. Worker breaks, equipment failures, inventory shortages, order cancellations, and differences between order types are not included.
 
 ## 4. Methods
 
@@ -342,7 +342,7 @@ Five resource configurations were tested:
 
 The bottleneck was identified by comparing resource utilization and waiting time before each process stage.
 
-A separate demand sensitivity analysis was also conducted using the baseline resource configuration. The average interarrival time was changed to 6, 5, 4, and 3.5 minutes. A shorter interarrival time represents a higher demand level.
+A separate demand sensitivity analysis was conducted using the baseline resource configuration. The average interarrival time was changed to 6.0, 5.0, 4.0, and 3.5 minutes. A shorter interarrival time represents a higher demand level.
 
 ## 5. Results
 
@@ -417,7 +417,7 @@ A separate demand sensitivity analysis was also conducted using the baseline res
 
 <div class="results-explanation" markdown="1">
 
-Table 3 compares the average performance of the five resource configurations based on 30 simulation replications for each scenario. Add One Picker and Add One Shipping Station produced results close to the baseline, which had an average throughput of **75.267 orders**, an average total waiting time of **49.680 minutes**, and an average completion time of **67.781 minutes**. Add One Packer produced a much larger improvement, increasing throughput to **91.233 orders** and reducing total waiting time to **8.643 minutes**. Balanced Capacity achieved the best overall performance among the five tested configurations, with the highest throughput (**92.733 orders**), the lowest total waiting time (**6.737 minutes**), and the lowest completion time (**24.755 minutes**).
+Table 3 compares the average performance of the five resource configurations based on 30 simulation replications for each scenario. Add One Picker and Add One Shipping Station produced results close to the baseline, which had an average throughput of **75.267 orders**, an average total waiting time of **49.680 minutes**, and an average completion time of **67.781 minutes**. Add One Packer produced a much larger improvement, increasing throughput to **91.233 orders** and reducing total waiting time to **8.643 minutes**. Balanced Capacity achieved the best overall performance among the five tested configurations, with the highest throughput of **92.733 orders**, the lowest total waiting time of **6.737 minutes**, and the lowest completion time of **24.755 minutes**.
 
 </div>
 
@@ -456,7 +456,7 @@ Table 3 compares the average performance of the five resource configurations bas
 
 <div class="results-explanation" markdown="1">
 
-Figures 1–3 compare the five resource configurations using average completion time, average total waiting time, and throughput. Add One Packer and Balanced Capacity performed much better than the other scenarios. Add One Packer reduced average completion time to **26.716 minutes** and total waiting time to **8.643 minutes**, while increasing throughput to **91.233 orders**. Balanced Capacity achieved the best overall results, with the lowest average completion time (**24.755 minutes**), the lowest total waiting time (**6.737 minutes**), and the highest throughput (**92.733 orders**). These figures show that increasing packing capacity produced the largest improvement in overall warehouse performance.
+Figures 1–3 compare the five resource configurations using average completion time, average total waiting time, and throughput. Add One Packer and Balanced Capacity performed much better than the other scenarios. Add One Packer reduced average completion time to **26.716 minutes** and total waiting time to **8.643 minutes**, while increasing throughput to **91.233 orders**. Balanced Capacity performed even better across all three measures. These figures show that increasing packing capacity produced the largest improvement in overall warehouse performance.
 
 </div>
 
@@ -537,7 +537,7 @@ Figures 1–3 compare the five resource configurations using average completion 
 
 <div class="results-explanation" markdown="1">
 
-Table 4 compares the bottleneck indicators and performance changes relative to the baseline. In the baseline configuration, the packer had the highest utilization (**0.947**), and packing had the longest average waiting time (**42.093 minutes**), indicating that packing was the main bottleneck. After one packer was added, total waiting time decreased by **82.603%** and completion time decreased by **60.586%**. Balanced Capacity produced the largest overall improvement, with throughput increasing by **17.467 orders** and total waiting time decreasing by **86.439%**.
+Table 4 compares the bottleneck indicators and performance changes relative to the baseline. In the baseline configuration, the packer had the highest utilization of **0.947**, and packing had the longest average waiting time of **42.093 minutes**, indicating that packing was the main bottleneck. After one packer was added, total waiting time decreased by **82.603%** and completion time decreased by **60.586%**. Balanced Capacity produced the largest overall improvement, with throughput increasing by **17.467 orders** and total waiting time decreasing by **86.439%**.
 
 </div>
 
@@ -565,9 +565,9 @@ Table 4 compares the bottleneck indicators and performance changes relative to t
 
 <div class="results-explanation" markdown="1">
 
-Figures 4 and 5 show resource utilization and average waiting time across the three stages (picking, packing, and shipping) under five scenarios. Figure 4 shows that packer utilization under Add One Packer (**0.573**) and Balanced Capacity (**0.575**) was lower than under the other three scenarios, where packer utilization remained close to **0.950** in the Baseline, Add One Picker, and Add One Shipping Station scenarios. Figure 5 shows that average packing waiting time was very low under Add One Packer (**0.212 minutes**) and Balanced Capacity (**0.966 minutes**). In contrast, average packing waiting time remained much higher under the Baseline (**42.093 minutes**), Add One Picker (**48.166 minutes**), and Add One Shipping Station (**44.833 minutes**) scenarios.
+Figures 4 and 5 show resource utilization and average waiting time across the three stages (picking, packing, and shipping) under five scenarios. Figure 4 shows that packer utilization under Add One Packer (**0.573**) and Balanced Capacity (**0.575**) was lower than in the Baseline, Add One Picker, and Add One Shipping Station scenarios, where packer utilization remained close to **0.950**. Figure 5 shows that average packing waiting time was very low under Add One Packer (**0.212 minutes**) and Balanced Capacity (**0.966 minutes**). In contrast, average packing waiting time remained much higher under the Baseline (**42.093 minutes**), Add One Picker (**48.166 minutes**), and Add One Shipping Station (**44.833 minutes**) scenarios.
 
-Therefore, the packing bottleneck identified in the baseline was removed as the main bottleneck under the Add One Packer and Balanced Capacity configurations. However, as the resource configuration changed, the main constraint could shift to another stage. Under Add One Packer, the results did not identify one single dominant new bottleneck. Under Balanced Capacity, shipping became the clearest new bottleneck in this scenario.
+Therefore, packing was no longer the main bottleneck under the Add One Packer and Balanced Capacity configurations. However, as the resource configuration changed, the main constraint could shift to another stage. Under Add One Packer, the results did not identify one single dominant new bottleneck. Under Balanced Capacity, shipping became the clearest new bottleneck.
 
 </div>
 
@@ -655,28 +655,28 @@ Therefore, the packing bottleneck identified in the baseline was removed as the 
 
 <div class="results-explanation" markdown="1">
 
-Table 5 and Figures 6 and 7 show how the baseline resource configuration performed under four different demand levels, with average interarrival times of (6.0, 5.0, 4.0, and 3.5 minutes). As the average interarrival time decreased from **6.0 minutes** to **3.5 minutes**, the demand level increased. The results show that average total waiting time increased sharply from **28.610 minutes** to **101.439 minutes**, while average completion time increased substantially from **46.696 minutes** to **119.509 minutes**. However, throughput increased only slightly from **71.867 orders** to **77.867 orders**, showing that the baseline system was approaching its capacity limit as demand increased.
+Table 5 and Figures 6–7 show how the baseline resource configuration performed under four different demand levels, with average interarrival times of 6.0, 5.0, 4.0, and 3.5 minutes. As the average interarrival time decreased from **6.0 minutes** to **3.5 minutes**, the demand level increased. The results show that average total waiting time increased sharply from **28.610 minutes** to **101.439 minutes**, while average completion time increased substantially from **46.696 minutes** to **119.509 minutes**. However, throughput increased only slightly from **71.867 orders** to **77.867 orders**, showing that the baseline system was approaching its capacity limit as demand increased.
 
 </div>
 
 ## 6. Discussion
 
-The baseline results show that packing was the main bottleneck because the packer had the highest utilization (**0.947**) and packing had the longest average waiting time (**42.093 minutes**). Therefore, adding one picker or one shipping station did not produce a meaningful improvement because neither change increased capacity at the packing stage. Their throughput and waiting-time results remained close to the baseline.
+The baseline results show that packing was the main bottleneck because the packer had the highest utilization of **0.947** and packing had the longest average waiting time of **42.093 minutes**. Adding one picker or one shipping station did not produce a meaningful improvement because neither change increased capacity at the packing stage. Their throughput and waiting-time results remained close to the baseline.
 
-After one packer was added, average total waiting time decreased from **49.680 minutes** to **8.643 minutes**, while average completion time decreased from **67.781 minutes** to **26.716 minutes**. This shows that increasing capacity at the actual bottleneck was much more effective than adding resources to other stages. Under Add One Packer, shipping had the highest utilization (**0.764**), while picking had the longest waiting time (**5.307 minutes**). Because these two indicators pointed to different stages, the results did not identify one single dominant new bottleneck. Under Balanced Capacity, shipping became both the highest-utilization resource (**0.772**) and the longest-wait stage (**4.967 minutes**), showing that shipping became the clearest new bottleneck in this scenario.
+After one packer was added, average total waiting time decreased from **49.680 minutes** to **8.643 minutes**, while average completion time decreased from **67.781 minutes** to **26.716 minutes**. This shows that increasing capacity at the actual bottleneck was much more effective than adding resources to other stages. Under Add One Packer, shipping had the highest utilization of **0.764**, while picking had the longest waiting time of **5.307 minutes**. Because these two indicators pointed to different stages, the results did not identify one single dominant new bottleneck. Under Balanced Capacity, shipping became both the highest-utilization resource (**0.772**) and the longest-wait stage (**4.967 minutes**), making it the clearest new bottleneck.
 
-The sensitivity analysis also shows that the baseline system became less stable as demand increased. When the average interarrival time decreased from **6.0 minutes** to **3.5 minutes**, average total waiting time increased sharply from **28.610 minutes** to **101.439 minutes**, while throughput increased only slightly from **71.867 orders** to **77.867 orders**. These results show that warehouse resources should be added based on the actual bottleneck rather than increasing capacity at every stage. They also show that capacity planning should consider how the bottleneck may shift after the original constraint is removed.
+The sensitivity analysis also shows that the baseline system became less effective as demand increased. When the average interarrival time decreased from **6.0 minutes** to **3.5 minutes**, average total waiting time increased sharply from **28.610 minutes** to **101.439 minutes**, while throughput increased only slightly from **71.867 orders** to **77.867 orders**. Overall, these results show that warehouse resources should be added based on the actual bottleneck rather than at every stage. They also show that capacity planning should consider how the bottleneck may shift after the original constraint is removed.
 
 ## 7. Limitations
 
 1. The model parameters were based on simulated assumptions rather than real warehouse data, so the results may not fully represent actual warehouse operations.
 2. The model only included picking, packing, and shipping, without considering equipment failures, employee breaks, order priorities, rework, or differences in order complexity.
-3. The analysis compared only 5 staffing configurations and tested 4 demand levels under the baseline resources.
+3. The analysis compared only five staffing configurations and tested four demand levels under the baseline resource configuration.
 4. The model did not include labor or equipment costs, so the results cannot directly identify the most cost-effective resource configuration.
 
 ## 8. Conclusion
 
-This project used discrete-event simulation to identify warehouse bottlenecks and compare different staffing configurations. In the baseline system, packing was the main bottleneck, with packer utilization of **0.947** and an average packing waiting time of **42.093 minutes**. Among the three single-resource addition scenarios, Add One Packer produced the largest improvement, reducing average total waiting time to **8.643 minutes**. Balanced Capacity achieved the best overall performance among the five tested resource configurations, with the highest throughput (**92.733 orders**) and the lowest total waiting time (**6.737 minutes**). The sensitivity analysis shows that the baseline system approached its capacity limit as demand increased. Overall, the simulation provides useful decision support for warehouse staffing and capacity planning.
+This project used discrete-event simulation to identify warehouse bottlenecks and compare different staffing configurations. In the baseline system, packing was the main bottleneck, with packer utilization of **0.947** and an average packing waiting time of **42.093 minutes**. Among the three single-resource addition scenarios, Add One Packer produced the largest improvement, reducing average total waiting time to **8.643 minutes**. Balanced Capacity achieved the best overall performance among the five tested resource configurations, with the highest throughput of **92.733 orders** and the lowest total waiting time of **6.737 minutes**. The sensitivity analysis shows that the baseline system approached its capacity limit as demand increased. Overall, the simulation provides useful decision support for warehouse staffing and capacity planning.
 
 ## 9. Tools
 <div class="tools-list">
