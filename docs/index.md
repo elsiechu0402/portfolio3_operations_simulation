@@ -421,6 +421,8 @@ Table 3 compares the average performance of the five resource configurations bas
 
 </div>
 
+*All figures on this page are interactive. Hover over any data point to see the exact values.*
+
 <div class="figure-block">
   <iframe
     class="interactive-frame"
